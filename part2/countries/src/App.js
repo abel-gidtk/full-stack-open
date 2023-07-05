@@ -48,17 +48,8 @@ const Filter = ({search, countries}) => {
 
 }
 
-const Country = ({country}) => {
-  const handleButtonClick = event => {
-    console.log(event)
-  }
-  return (
-    <div>
-      {country.name.common}
-      <Button text="show" func={handleButtonClick}/>
-    </div>
-  )
-}
+const Country = ({country}) => <div>{country.name.common}</div>
+
 
 const CountryDetails = ({country}) => {
   return (
@@ -86,12 +77,6 @@ const Languages = ({country}) => {
 const Flag = ({country}) => {
   return (
     <img src={country.flags.png}/>
-  )
-}
-
-const Button = ({text, func}) => {
-  return (
-    <button onClick={func}>{text}</button>
   )
 }
 
